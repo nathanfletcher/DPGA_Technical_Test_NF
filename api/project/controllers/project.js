@@ -21,6 +21,6 @@ module.exports = {
         } else {
           entity = await strapi.services.project.create(body);
         }
-        return sanitizeEntity(entity, { model: strapi.models.project });
+        return entity;
       },
 };
