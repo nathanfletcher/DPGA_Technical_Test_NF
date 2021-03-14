@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "ownerEmail": {
+      "type": "email"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "submissionGuideReviewed": {
+      "type": "string"
+    },
+    "ownerName": {
+      "type": "string"
+    },
+    "publicRepoUrl": {
+      "type": "string"
+    },
+    "sdg_categories": {
+      "collection": "sdg-category"
+    },
+    "project_categories": {
+      "collection": "project-category"
+    }
+  }
+}
