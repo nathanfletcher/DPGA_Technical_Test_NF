@@ -24,4 +24,16 @@ module.exports = {
         }
         return entity;
       },
+
+    async getTechnicalResources(ctx){
+        let projectId = ctx.params.id
+        let project = await strapi.services.project.findOne({id: projectId});
+        let projectTechnologyStackArray = [] 
+        project.technology_stacks.forEach(stack => {
+            return projectTechnologyStackArray.push(stack.id);
+        });
+        console.log(projectTechnologyStackArray)
+        let technicalResourceArray = await strapi.query('technical-resource').find({ technology_stacks_in: projectTechnologyStackArray ? projectTechnologyStackArray : [] });
+        return technicalResourceArray
+    }
 };

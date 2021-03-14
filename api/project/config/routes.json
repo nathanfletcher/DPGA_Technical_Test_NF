@@ -25,6 +25,14 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/projects/getTechnicalResources/:id",
+      "handler": "project.getTechnicalResources",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "POST",
       "path": "/projects",
       "handler": "project.create",
