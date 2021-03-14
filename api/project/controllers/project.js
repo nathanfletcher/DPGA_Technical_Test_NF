@@ -1,5 +1,5 @@
 'use strict';
-
+const { sanitizeEntity } = require('strapi-utils');
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
  * to customize this controller
@@ -23,6 +23,7 @@ module.exports = {
           entity = await strapi.services.project.create(body);
         }
         return entity;
+        
       },
 
     async getTechnicalResources(ctx){
@@ -34,6 +35,7 @@ module.exports = {
         });
         console.log(projectTechnologyStackArray)
         let technicalResourceArray = await strapi.query('technical-resource').find({ technology_stacks_in: projectTechnologyStackArray ? projectTechnologyStackArray : [] });
-        return technicalResourceArray
+        
+        return technicalResourceArray.map(entity => sanitizeEntity(entity, { model: strapi.models["technical-resource"] }));
     }
 };
