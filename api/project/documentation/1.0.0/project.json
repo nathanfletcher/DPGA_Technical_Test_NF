@@ -553,6 +553,9 @@
                 "name": {
                   "type": "string"
                 },
+                "project": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -573,6 +576,37 @@
                   "type": "string"
                 },
                 "name": {
+                  "type": "string"
+                },
+                "project": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "technology_stacks": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "project": {
+                  "type": "string"
+                },
+                "technical_resource": {
                   "type": "string"
                 },
                 "created_by": {
@@ -613,6 +647,12 @@
             }
           },
           "project_categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "technology_stacks": {
             "type": "array",
             "items": {
               "type": "string"

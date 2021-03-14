@@ -30,10 +30,16 @@
       "type": "string"
     },
     "sdg_categories": {
-      "collection": "sdg-category"
+      "collection": "sdg-category",
+      "via": "project"
     },
     "project_categories": {
-      "collection": "project-category"
+      "collection": "project-category",
+      "via": "project"
+    },
+    "technology_stacks": {
+      "collection": "technology-stack",
+      "via": "project"
     }
   }
 }

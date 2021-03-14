@@ -537,12 +537,67 @@
           },
           "name": {
             "type": "string"
+          },
+          "project": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "ownerEmail": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "submissionGuideReviewed": {
+                "type": "string"
+              },
+              "ownerName": {
+                "type": "string"
+              },
+              "publicRepoUrl": {
+                "type": "string"
+              },
+              "sdg_categories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "project_categories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "technology_stacks": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewSdg-category": {
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "project": {
             "type": "string"
           },
           "created_by": {

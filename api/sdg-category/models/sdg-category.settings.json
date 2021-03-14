@@ -13,6 +13,10 @@
   "attributes": {
     "name": {
       "type": "string"
+    },
+    "project": {
+      "via": "sdg_categories",
+      "model": "project"
     }
   }
 }

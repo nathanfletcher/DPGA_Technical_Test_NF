@@ -2,16 +2,25 @@
   "kind": "collectionType",
   "collectionName": "technology_stacks",
   "info": {
-    "name": "technologyStack"
+    "name": "technologyStack",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "name": {
       "type": "string"
+    },
+    "project": {
+      "via": "technology_stacks",
+      "model": "project"
+    },
+    "technical_resource": {
+      "via": "technology_stacks",
+      "model": "technical-resource"
     }
   }
 }

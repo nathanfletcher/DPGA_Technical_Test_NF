@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/technology-stacks": {
+    "/technical-resources": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Technology-stack"
+          "Technical-resource"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Technology-stack"
+          "Technical-resource"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTechnology-stack"
+                "$ref": "#/components/schemas/NewTechnical-resource"
               }
             }
           }
         }
       }
     },
-    "/technology-stacks/count": {
+    "/technical-resources/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Technology-stack"
+          "Technical-resource"
         ],
         "parameters": []
       }
     },
-    "/technology-stacks/{id}": {
+    "/technical-resources/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Technology-stack"
+          "Technical-resource"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Technology-stack"
+          "Technical-resource"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTechnology-stack"
+                "$ref": "#/components/schemas/NewTechnical-resource"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Technology-stack"
+          "Technical-resource"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Technology-stack": {
+      "Technical-resource": {
         "required": [
           "id"
         ],
@@ -535,98 +535,49 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "email": {
             "type": "string"
           },
-          "project": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "ownerEmail": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "submissionGuideReviewed": {
-                "type": "string"
-              },
-              "ownerName": {
-                "type": "string"
-              },
-              "publicRepoUrl": {
-                "type": "string"
-              },
-              "sdg_categories": {
-                "type": "array",
-                "items": {
+          "technology_stacks": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "project": {
+                  "type": "string"
+                },
+                "technical_resource": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
                   "type": "string"
                 }
-              },
-              "project_categories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "technology_stacks": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "technical_resource": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "technology_stacks": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           }
         }
       },
-      "NewTechnology-stack": {
+      "NewTechnical-resource": {
         "properties": {
-          "name": {
+          "email": {
             "type": "string"
           },
-          "project": {
-            "type": "string"
-          },
-          "technical_resource": {
-            "type": "string"
+          "technology_stacks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

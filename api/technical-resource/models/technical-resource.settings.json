@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "technical_resources",
+  "info": {
+    "name": "technicalResource",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "technology_stacks": {
+      "collection": "technology-stack",
+      "via": "technical_resource"
+    }
+  }
+}
