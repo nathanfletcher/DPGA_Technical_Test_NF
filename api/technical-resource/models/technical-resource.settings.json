@@ -17,6 +17,9 @@
     "technology_stacks": {
       "collection": "technology-stack",
       "via": "technical_resource"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }
