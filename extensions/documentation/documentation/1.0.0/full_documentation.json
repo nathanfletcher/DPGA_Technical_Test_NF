@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/14/2021 5:26:50 PM"
+    "x-generation-date": "03/15/2021 3:26:59 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5122,8 +5122,11 @@
                 "project": {
                   "type": "string"
                 },
-                "technical_resource": {
-                  "type": "string"
+                "technical_resources": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"
@@ -5290,8 +5293,11 @@
                 "project": {
                   "type": "string"
                 },
-                "technical_resource": {
-                  "type": "string"
+                "technical_resources": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"
@@ -5392,31 +5398,34 @@
               }
             }
           },
-          "technical_resource": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "technology_stacks": {
-                "type": "array",
-                "items": {
+          "technical_resources": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "technology_stacks": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "name": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
                   "type": "string"
                 }
-              },
-              "name": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           }
@@ -5430,8 +5439,11 @@
           "project": {
             "type": "string"
           },
-          "technical_resource": {
-            "type": "string"
+          "technical_resources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

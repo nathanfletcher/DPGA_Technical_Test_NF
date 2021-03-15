@@ -674,8 +674,11 @@
                 "project": {
                   "type": "string"
                 },
-                "technical_resource": {
-                  "type": "string"
+                "technical_resources": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"

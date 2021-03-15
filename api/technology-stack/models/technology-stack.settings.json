@@ -18,9 +18,9 @@
       "via": "technology_stacks",
       "model": "project"
     },
-    "technical_resource": {
+    "technical_resources": {
       "via": "technology_stacks",
-      "model": "technical-resource"
+      "collection": "technical-resource"
     }
   }
 }

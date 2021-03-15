@@ -36,7 +36,7 @@ module.exports = {
             return projectTechnologyStackArray.push(stack.id);
         });
         console.log(projectTechnologyStackArray)
-        let technicalResourceArray = await strapi.query('technical-resource').find({ technology_stacks_in: projectTechnologyStackArray ? projectTechnologyStackArray : [] });
+        let technicalResourceArray = await strapi.query('technical-resource').find({ technology_stacks_contains: projectTechnologyStackArray ? projectTechnologyStackArray : [] });
         
         return technicalResourceArray.map(entity => sanitizeEntity(entity, { model: strapi.models["technical-resource"] }));
     }
