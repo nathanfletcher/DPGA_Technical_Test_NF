@@ -18,6 +18,10 @@ module.exports = async () => {
         strapi.services["technology-stack"].create({name:"Python"})
         strapi.services["technology-stack"].create({name:"HTML / CSS / Javascript"})
         strapi.services["technology-stack"].create({name:"Ruby on Rails"})
+        strapi.services["technology-stack"].create({name:"Postgres"})
+        strapi.services["technology-stack"].create({name:"Docker"})
+        strapi.services["technology-stack"].create({name:"Typescript"})
+        strapi.services["technology-stack"].create({name:"React"})
     }
 
     let projectCategoryArray = await strapi.query('project-category').find();
