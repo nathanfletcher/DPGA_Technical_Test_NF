@@ -9,6 +9,7 @@ This project runs on NodeJS and would require a minimum version of Node 12
 ## Step 1
  - Run `yarn install` and `yarn build` to install node modules and build the admin interface
  - Run `strapi start` to launch the web app and visit `localhost:1337` to create your admin account
+ - login to the admin interface by going to `http://localhost1337/admin`
  
 ## Step 2
  - Create the 2 sample google form exactly like:
@@ -23,6 +24,8 @@ This project runs on NodeJS and would require a minimum version of Node 12
  - Creat Google apps scripts for each one by clicking on Tools > Script Editor
  - Paste the `Code.gs` file in the *googleFormsScript* folder for each corresponding form and accept their permissions
  
+ ## Step 3
+ - After logging into the admin interface please to to `Settings > Roles > Public` and confirm that the roles for the endpoints of the application are the same as the ones in the `screenshots` folder of this project
 
 ## Testing
 To test from localhost using `ngrok`[https://ngrok.com/download], use the command:

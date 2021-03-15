@@ -31,13 +31,11 @@ function postData(resp){
     technology_stacks: resp["What technologies does your project use?"].split(", ")
   };
 
-  let token = 'fake-token-to-simulate-security';
   let options = {
     'method' : 'post',
     'contentType': 'application/json',
     // Convert the JavaScript object to a JSON string.
     'payload' : JSON.stringify(data),
-    headers: {"Authorization": "Bearer "+token}
   };
 
   let response = UrlFetchApp.fetch('http://4175ad1e5629.ngrok.io/projects', options);

@@ -18,13 +18,11 @@ function postData(resp){
     technology_stacks: resp["Which technologies are you interested in working with?"] ? resp["Which technologies are you interested in working with?"].split(", ") : "",
   };
 
-  let token = 'fake-token-to-simulate-security';
   let options = {
     'method' : 'post',
     'contentType': 'application/json',
     // Convert the JavaScript object to a JSON string.
     'payload' : JSON.stringify(data),
-    headers: {"Authorization": "Bearer "+token}
   };
 
   let response = UrlFetchApp.fetch('http://4175ad1e5629.ngrok.io/technical-resources', options);
