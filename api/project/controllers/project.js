@@ -11,10 +11,12 @@ module.exports = {
         console.log("THe body ",ctx.request.body)
         let sdgCategoryArray = await strapi.query('sdg-category').find({ name_in: ctx.request.body.sdg_categories ? ctx.request.body.sdg_categories : [] });
         let projectCategoryArray = await strapi.query('project-category').find({ name_in: ctx.request.body.project_categories ? ctx.request.body.project_categories : [] })
+        let technologyStackArray = await strapi.query('technology-stack').find({ name_in: ctx.request.body.technology_stacks ? ctx.request.body.technology_stacks : [] })
 
         let body = ctx.request.body
         body.sdg_categories = sdgCategoryArray
         body.project_categories = projectCategoryArray
+        body.technology_stacks = technologyStackArray
 
         if (ctx.is('multipart')) {
           //const { data, files } = parseMultipartData(ctx);
