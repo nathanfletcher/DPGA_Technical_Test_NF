@@ -3,6 +3,12 @@
 This submission polls DPGA projects and tries to match them with technical resources. Matched projects can be seen via an endpoint eg `http://localhost:1337/projects/getTechnicalResources/1` 
 
 # Setup
+
+## You can take a shortcut and deploy the full solution to Google Cloud Run by clicking the button below
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
+
+## Or you could follow the manual steps below
+
 ## Step 0
 This project runs on NodeJS and would require a minimum version of Node 12
 
